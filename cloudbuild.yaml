@@ -9,4 +9,4 @@ steps:
   - --source=.
   - --entry-point=hello_gcs
   - --trigger-http
-  - --runtime=python3.10
+  - --runtime=python310
