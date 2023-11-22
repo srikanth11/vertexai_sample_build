@@ -6,7 +6,4 @@ steps:
   - call
   - function-1
   - --region="us-central1"
-  - --source=.
-  - --entry-point=hello_gcs
-  - --trigger-http
-  - --runtime=python310
+  
