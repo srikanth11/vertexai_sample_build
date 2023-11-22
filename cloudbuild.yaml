@@ -3,7 +3,7 @@ steps:
   args:
   - gcloud
   - functions
-  - deploy
+  - call
   - function-1
   - --region="us-central1"
   - --source=.
