@@ -1,17 +1,13 @@
-# steps:
-# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-#   args:
-#   - gcloud
-#   - functions
-#   - call
-#   - function-1
-#   - --region="us-central1"
-#   - --source=.
-#   - --entry-point=hello_gcs
-#   - --trigger-http
-#   - --runtime=python310
-
 steps:
+  # Step1: upload the file to gcs output bucket from files folder
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    args:
+      - gsutil
+      - cp
+      - files/emp_cleaned_data_2k_lines.csv
+      - gs://output_buk
+    
+  # Step2: create the training model in the gcs training registry
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     args:
       - gcloud
