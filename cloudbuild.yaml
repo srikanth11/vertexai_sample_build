@@ -1,5 +1,11 @@
 steps:
   # Step1: upload the file to gcs output bucket from files folder
+  # - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+  #   args:
+  #     - gsutil
+  #     - cp
+  #     - files/emp_cleaned_data_2k_lines.csv
+  #     - gs://output_buk
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     id: attach-date
     args:
@@ -11,7 +17,7 @@ steps:
         current_date=$(date +%d-%m-%y)
         time=$(date '+%I-%M%p')
         filename="emp_cleaned_data_${current_date}_${time}.csv"
-        gsutil cp files/emp_cleaned_data_2k_lines.csv gs://output_buc1/${filename}
+        gsutil cp files/emp_cleaned_data_2k_lines.csv gs://output_buk/${filename}
     
   # Step2: create the training model in the gcs training registry
   - name: gcr.io/google.com/cloudsdktool/cloud-sdk
