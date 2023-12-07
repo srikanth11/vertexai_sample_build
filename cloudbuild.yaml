@@ -7,7 +7,7 @@ steps:
   #     - files/emp_cleaned_data_2k_lines.csv
   #     - gs://output_buk
 
-  - name: gcr.io/tensile-nebula-406509/pypi-tools:3.7
+  - name: gcr.io/tensile-nebula-406509/pypi-tools:3.10
     id: run-python-prg
     entrypoint: python
     args:
