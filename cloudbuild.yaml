@@ -6,7 +6,8 @@ steps:
   #     - cp
   #     - files/emp_cleaned_data_2k_lines.csv
   #     - gs://output_buk
-  - name:
+
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
     id: run-python-prg
     entrypoint: python
     args:
