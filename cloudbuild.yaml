@@ -7,13 +7,11 @@ steps:
   #     - files/emp_cleaned_data_2k_lines.csv
   #     - gs://output_buk
 
-  - name: gcr.io/tensile-nebula-406509/pypi-tools:3.10
+  - name: gcr.io/google.com/cloudsdktool/tensile-nebula-406509/pypi-tools:3.10
     id: run-python-prg
     entrypoint: python
     args:
-      - cmd
-      - python sample.py
-
+      
   # - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   #   id: attach-date
   #   args:
