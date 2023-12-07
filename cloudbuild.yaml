@@ -8,8 +8,8 @@ steps:
   #     - gs://output_buk
 
   - name: python
-     entrypoint: python
-     args: ["train_deploy.py"]
+    entrypoint: python
+    args: ["train_deploy.py"]
       
   # - name: gcr.io/google.com/cloudsdktool/cloud-sdk
   #   id: attach-date
